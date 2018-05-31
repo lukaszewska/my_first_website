@@ -1,0 +1,832 @@
+/********* general *********/
+html, body, main {
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2b313a;
+    color: #838A90;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.fas, .far, .fab {
+    font-size: 2em;
+    z-index: 99;
+}
+h2 {
+    color: #2b313a;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.first-animated-line {
+    opacity: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #bf2331;
+    margin: .65em auto;
+    transition: .7s 1s;
+    -webkit-transition: .7s 1s;
+    -o-transition: .7s 1s;
+}
+.first-animated-line-start {
+    opacity: 1;
+    width: 100px;
+}
+.animated-line, .last-animated-line {
+    opacity: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #bf2331;
+    margin: .65em auto;
+    transition: .7s;
+     -webkit-transition: .7s;
+    -o-transition: .7s;
+}
+.animated-line-start, .last-animated-line-start {
+    opacity: 1;
+    width: 100px;
+}
+
+/********* navigation *********/
+
+#menu-wrap {
+    z-index: 100;
+    width: 100%;
+    transition: .7s;
+     -webkit-transition: .7s;
+    -o-transition: .7s;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#menu {
+    width: 100%;
+}
+#logo {
+    float: left;
+    margin: 10px;
+    display: block;
+}
+#logo:hover {
+    cursor: pointer;
+}
+#topnav {
+    float: right;
+}
+#open-menu, #close-menu {
+    display: inline-block;
+    margin: .6em;
+    color: #eaeaea;
+    transition: .5s;
+     -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+#close-menu {
+    margin-left: 8.75em;
+}
+#open-menu:hover, #close-menu:hover {
+    cursor: pointer;
+    color: #bf2331;
+}
+#navigation {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    background-color: #838A90;
+    /* This trasform moves the drawer off canvas. */
+    transform: translate(100px, 0);
+    -webkit-transform: translate(100px, 0);
+    -ms-transform: translate(100px, 0);
+    -moz-transform: translate(100px, 0);
+    -o-transform: translate(100px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+#navigation.open {
+    transform: translate(-130px, 0);
+    -webkit-transform: translate(-130px, 0);
+    -ms-transform: translate(-130px, 0);
+    -moz-transform: translate(-130px, 0);
+    -o-transform: translate(-130px, 0);
+}
+.underline-nav {
+    list-style: none;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 1.25em;
+}
+li a {
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-size: 1.15em;
+    line-height: 2em;
+    color: #eaeaea;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
+}
+li a:hover {
+    color: #bf2331;
+}
+li a.active {
+    color: #bf2331;
+}
+.underline-nav:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background-color: #bf2331;
+    height: 2px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+}
+
+.underline-nav:hover:before, .underline-nav:focus:before, .underline-navr:active:before {
+    left: 30%;
+    right: 30%;
+}
+
+/********* header *********/
+
+#background-img {
+    width: 100%;
+    height: 100vh;
+    background: url(images/background400.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+ }
+#hello {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+h1 {
+    color: #eaeaea;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+h3 {
+    color: #eaeaea;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: normal;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+.down-open-wrap {
+    position: absolute;
+    top: 87%;
+    text-align: center;
+    width: 100%;
+}
+.fa-angle-down {
+    color: #fff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+.fa-angle-down:hover {
+    color: #bf2331;
+    cursor: pointer;
+} 
+/********* about me top *********/
+
+#about-me-top-wrap {
+    background-color: #f2f2f2;
+}
+#about-me-top {
+    width: 100%;
+    padding-top: 2em;
+}
+#about-me-img {
+    width: 250px;
+    height: 200px;
+    margin: 2em auto 0em auto;
+    padding: 0;
+    background: url(images/about-me.jpg) no-repeat center;
+    background-size: cover;
+    border: 2px solid #f2f2f2;
+    border-radius: 100%;
+    box-sizing: border-box;
+ }
+#about-me-content {
+    padding-top: 1.25em;
+    padding-bottom: 2em;
+}
+
+#about-me-content p {
+    padding-left: 1.5em;
+    padding-right: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+}
+
+/********* about me bottom *********/
+
+#about-me-bottom-wrap {
+    background-color: #eaeaea;
+}
+#about-me-bottom {
+    width: 100%;
+    padding-bottom: 1.25em;
+}
+.my-values {
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 1.5em;
+}
+.circle {
+    float: left;
+    width: 25%;
+    min-height: 80px;
+    display: table;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+svg {
+    display: none;
+}
+.icon-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    color: #bf2331;
+}
+.fa-code, .fa-calendar-check, .fa-users {
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+.value-text {
+    float: left;
+    width: 75%;
+    display: table;
+    min-height: 90px;
+}
+.value-text p {
+    line-height: 1.3em;
+    letter-spacing: 0em;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: .7em;
+}
+
+/********* portfolio *********/
+
+#portfolio-wrap {
+    background-color: #f2f2f2;
+}
+#portfolio {
+    width: 100%;
+    padding-top: 2.5em;
+}
+#portfolio-content {
+    padding-top: 1.2em;
+    padding-bottom: 1.5em;
+}
+.portfolio-item {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 2em auto;
+}
+.portfolio-img {
+    width: 300px;
+    height: 300px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    position: relative;
+}
+#portfolio-todo-app {
+    background: url(images/portfolioToDo.jpg) no-repeat center;
+}
+#portfolio-quotes-app {
+    background: url(images/portfolioQuotes.jpg) no-repeat center;
+}
+#portfolio-photo-page {
+    background: url(images/portfolioPhotoPage.jpg) no-repeat center;
+}
+#portfolio-hangman-game {
+    background: url(images/portfolioHangman.jpg) no-repeat center;
+}
+.portfolio-img.rotate {
+    transform: rotate(45deg) scale(2, 2);
+    -webkit-transform: rotate(45deg) scale(2, 2);
+    -ms-transform: rotate(45deg) scale(2, 2);
+    -moz-transform: rotate(45deg) scale(2, 2);
+    -o-transform: rotate(45deg) scale(2, 2);
+}
+@keyframes portfolio-show {
+    0% {
+        opacity: .33;
+  }
+    50% {
+        opacity: .66;
+  }
+
+    100% {
+        opacity: 1;
+  }
+}
+.portfolio-text {
+    animation-name: portfolio-show;
+    animation-duration: .5s;
+    height: 300px;
+    width: 300px;
+    background-color: rgba(43,49,58,.95);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.portfolio-text p {
+    color: #f2f2f2;
+    font-size: 0.75em;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: .4em;
+    
+}
+.portfolio-line {
+    width: 80px;
+    height: 1px;
+    background-color: #bf2331;
+    margin: 0 auto 4.5em auto;
+}
+
+.portfolio-buttons {
+    margin: 8em auto 0 auto;
+    text-align: center;
+    width: 80%;  
+}
+.portfolio-button {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.portfolio-button a {
+    color: #f2f2f2;
+    text-decoration: none;
+    border: 1px solid #f2f2f2;
+    border-radius: 12px;
+    display: inline-block;
+    width: 80px;
+    height: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.8em;
+    font-size: .9em;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+  
+}
+.portfolio-button a:hover {
+    background-color: #bf2331;
+    width: 100px;
+    border: 1px solid #bf2331;
+}
+
+/********* skills *********/
+
+#skills {
+    width: 100%;
+    padding-top: 2.5em;
+}
+#skills h2 {
+    color: #eaeaea;
+}
+#skills-content {
+    padding-top: 1.3em;
+    padding-bottom: 1.7em;
+}
+#skills-text {
+    width: 100%;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+#skills-graphic {
+    width: 100%;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+#skills-text p {
+    padding: 0px 1.25em 2em 1.25em;
+    text-align: justify;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+    color: #eaeaea;
+}
+.skills-icons {
+    float: left;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.single-skill-wrap {
+    float: left;
+    width: 70%;
+    margin: 0 0 2em 1em;
+}
+.single-skill-text {
+    color: #eaeaea;
+    text-transform: uppercase;
+}
+.single-skill-empty {
+    width: 100%;
+    height: 11px;
+    background-color: #eaeaea;
+    margin-top: .3em;
+    position: relative;
+}
+.single-skill-animated {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    left: 0;
+    top: 1px;
+    background-color: #bf2331;
+    height: 9px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+}
+
+.very-good.single-skill-animated-start {
+    opacity: 1;
+    width: 80%;
+}
+.good.single-skill-animated-start {
+    opacity: 1;
+    width: 60%;
+}
+.medium.single-skill-animated-start {
+    opacity: 1;
+    width: 45%;
+}
+.beginner.single-skill-animated-start {
+    opacity: 1;
+    width: 25%;
+}
+
+/********* contact *********/
+
+#contact-wrap {
+    background-color: #eaeaea;
+    padding-top: 2em;
+}
+#contact {
+    width: 100%;
+    padding: 1em 0 1.2em 0;
+}
+#cv {
+    width: 200px;
+    background-color: #f2f2f2;
+    color: #bf2331;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    outline: none;
+    border-radius: 15px;
+    padding: .9em 0 .6em 0;
+    border: 2px solid #eaeaea;
+    cursor: pointer;
+    margin: 1em auto;
+    display: block;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(131,138,144,0.6);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(131,138,144,0.6);
+    box-shadow: 0px 3px 3px 0px rgba(131,138,144,0.6);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+#cv a {
+    color: #bf2331;
+}
+#cv:hover {
+    width: 250px;
+    cursor: pointer;
+}
+#cv > a:visited {
+    color: #bf2331;
+}
+.contact-half {
+    width: 100%;
+    text-align: center;
+    padding: .9em;
+}
+.contact-half:first-of-type {
+    margin-top: 2em;
+}
+.contact-half:nth-of-type(2) {
+    margin-bottom: 2em;
+}
+.icons-contact {
+    color: #838A90;
+    font-size: 1.2em;
+    position: relative;
+    top: 2px;
+}
+.contact-half a {
+    color: #838A90;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
+}
+.contact-half a:hover {
+    cursor: pointer;
+    color: #2b313a;
+}
+
+.contact-half p {
+    display: inline-block;
+    font-size: .8em;
+}
+
+/********* social-media *********/
+
+#social-media {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0 .2em 0;
+}
+.social {
+    font-size: 2em;
+    color: #eaeaea;
+    transition: .7s;
+      -webkit-transition: .7s;
+    -o-transition: .7s;
+    padding: .3em;
+}
+
+.social:hover {
+    color: #bf2331;
+    cursor: pointer;
+}
+/********* footer *********/
+
+#copyright {
+    color: #eaeaea;
+    font-size: 0.6em;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2.25em;
+    letter-spacing: .4em;
+}
+
+/******************* MEDIA QUERRIES *********************/
+@media screen and (min-width: 480px) {
+    /***** header *****/
+   #background-img {
+        width: 100%;
+        height: 100vh;
+        background: url(images/background400.jpg) no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+    /***** about me bottom *****/
+    .fa-code, .fa-calendar-check, .fa-users {
+        font-size: 3em;
+    }
+    /***** portfolio *****/
+    .portfolio-item {
+        width: 420px;
+        height: 320px;
+    }
+    .portfolio-img {
+        width: 420px;
+        height: 320px;
+        
+    }
+    #portfolio-todo-app {
+        background: url(images/portfolioToDo420.jpg) no-repeat center;
+    }
+    #portfolio-quotes-app {
+        background: url(images/portfolioQuotes420.jpg) no-repeat center;
+    }
+    #portfolio-photo-page {
+        background: url(images/portfolioPhotoPage420.jpg) no-repeat center;
+    }
+    #portfolio-hangman-game {
+        background: url(images/portfolioHangman420.jpg) no-repeat center;
+    }
+    .portfolio-text {
+        width: 420px;
+        height: 320px;
+    }
+    .portfolio-text p {
+        font-size: .85em;
+    }
+    /***** contact form *****/
+    #form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /***** contact form *****/
+    .icons-contact {
+        font-size: 1.4em;
+    }
+    .contact-half p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    #about-me-top-wrap, #portfolio-wrap, #skills-wrap, #contact-form-wrap {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    /***** navigation *****/
+    #open-menu, #close-menu {
+        display: none;
+    }
+    #navigation {
+        width: auto;
+        height: 50px;
+        position: relative;
+        background-color: transparent;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+    }
+    .underline-nav {
+        height: 45px;
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    li a {
+        line-height: 3em;
+        padding: .7em;
+    }
+    /***** about me *****/
+    #about-me-top {
+        padding-bottom: 2.5em;
+    }
+    #about-me-content p {
+        letter-spacing: 0.05em;
+    }
+    .my-values {
+        float: left;
+        width: 33%;
+        text-align: center;
+        position: relative;
+        min-height: 200px;
+    }
+    svg {
+        display: inline-block;
+        position: relative;
+    }
+    .circle {
+        position: absolute;
+        top: -40px;
+        width: 100%;
+        display: block;
+    }
+    .icon-wrap {
+        width: 100%;
+        position: absolute;
+        top: 15%;
+    }
+    .icon-wrap .fas, .icon-wrap .far {
+       text-align: center;
+    }
+    .value-text {
+        float: none;
+        width: 100%;
+        margin-top: 1.8em;
+    }
+    .value-text p {
+        padding: 1em;
+        text-align: center;
+    }
+    /***** skills *****/
+    #skills-text {
+        float: left;
+        width: 50%;
+        display: table;
+        min-height: 330px;
+    }
+    #skills-graphic {
+        float: left;
+        width: 50%;
+    }
+    #skills-text p {
+        display: table-cell;
+        line-height: 2em;
+        text-align: left;
+        letter-spacing: 0.05em;
+        vertical-align: middle;
+        padding: 0 1em 0 2em;
+    }
+    /***** contact form *****/
+    #form {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    #menu, #about-me-top, #about-me-bottom, #portfolio, #skills, #contact-form {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /***** header *****/
+   #background-img {
+        width: 100%;
+        height: 100vh;
+        background: url(images/background1200.jpg) no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+    #hello {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 30%;
+    }
+    h3 {
+        width: 60%;
+        line-height: 1.6em;
+        font-size: 1.4em;
+    }
+    .fa-angle-down {
+        font-size: 2.5em;
+    }
+    /***** about-me *****/
+    #about-me-img {
+        float: left;
+        margin: 2em;    
+    }
+    #about-me-content {
+        min-height: 250px;
+        margin-top: 2em;
+    }
+    .value-text p {
+        letter-spacing: 0.05em;
+        line-height: 1.5em;
+        padding: 1em;
+        text-align: center;
+    }
+    /***** portfolio *****/
+    .portfolio-item {
+        float: left;
+        margin-left: 2.5em;
+    }
+    /***** contact form *****/
+    #form {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    /***** header *****/
+   #background-img {
+        width: 100%;
+        height: 100vh;
+        background: url(images/background1600.jpg) no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+}

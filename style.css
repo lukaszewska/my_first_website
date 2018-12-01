@@ -396,6 +396,12 @@ svg {
     width: 50%;
     text-align: center;
 }
+.portfolio-button-center {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 .portfolio-button a {
     color: #f2f2f2;
@@ -412,11 +418,31 @@ svg {
     transition: .3s;
     -webkit-transition: .3s;
     -o-transition: .3s;
-  
 }
-.portfolio-button a:hover {
+.portfolio-button-center a {
+    color: #f2f2f2;
+    text-decoration: none;
+    border: 1px solid #f2f2f2;
+    border-radius: 12px;
+    display: inline-block;
+    width: 160px;
+    height: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.8em;
+    font-size: .9em;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+}
+.portfolio-button a:hover{
     background-color: #bf2331;
     width: 100px;
+    border: 1px solid #bf2331;
+}
+.portfolio-button-center a:hover {
+    background-color: #bf2331;
+    width: 180px;
     border: 1px solid #bf2331;
 }
 

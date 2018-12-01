@@ -329,14 +329,17 @@ svg {
     -o-transition: .5s;
     position: relative;
 }
+#portfolio-photo-page {
+    background: url(images/portfolioPhotoPage.jpg) no-repeat center;
+}
+#portfolio-wordpress-geodesy-page {
+    background: url(images/portfolioWordpressPageGeodesy.jpg) no-repeat center;
+}
 #portfolio-todo-app {
     background: url(images/portfolioToDo.jpg) no-repeat center;
 }
 #portfolio-quotes-app {
     background: url(images/portfolioQuotes.jpg) no-repeat center;
-}
-#portfolio-photo-page {
-    background: url(images/portfolioPhotoPage.jpg) no-repeat center;
 }
 #portfolio-hangman-game {
     background: url(images/portfolioHangman.jpg) no-repeat center;
@@ -659,14 +662,17 @@ svg {
         height: 320px;
         
     }
+    #portfolio-photo-page {
+        background: url(images/portfolioPhotoPage420.jpg) no-repeat center;
+    }
+    #portfolio-wordpress-geodesy-page {
+        background: url(images/portfolioWordpressPageGeodesy420.jpg) no-repeat center;
+    }
     #portfolio-todo-app {
         background: url(images/portfolioToDo420.jpg) no-repeat center;
     }
     #portfolio-quotes-app {
         background: url(images/portfolioQuotes420.jpg) no-repeat center;
-    }
-    #portfolio-photo-page {
-        background: url(images/portfolioPhotoPage420.jpg) no-repeat center;
     }
     #portfolio-hangman-game {
         background: url(images/portfolioHangman420.jpg) no-repeat center;
